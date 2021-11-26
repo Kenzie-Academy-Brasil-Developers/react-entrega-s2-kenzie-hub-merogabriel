@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  z-index: 2;
   display: flex;
   flex-flow: column nowrap;
   position: absolute;
@@ -10,11 +11,12 @@ export const Container = styled.div`
   border: 1px solid #f5f5f5;
   margin-top: -50vh;
   background: #ffffff;
+
   button {
     background: var(--green);
     color: #ffffff;
   }
-  /* opacity: ${(props) => (props.auth ? "1" : "0.5")}; */
+
   p {
     font-size: 18px;
     margin-bottom: 70px;

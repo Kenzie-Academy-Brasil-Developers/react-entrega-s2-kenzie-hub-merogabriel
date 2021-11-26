@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--lightgrey);
 `;
 
 export const Header = styled.div`
@@ -12,6 +15,14 @@ export const Header = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background-color: #ffffff;
+
+  @media (min-width: 1023px) {
+    margin-top: 1rem;
+    width: 90vw;
+    align-self: center;
+    border-radius: 8px;
+  }
 
   h1 {
     font-size: 22px;
@@ -22,11 +33,14 @@ export const Header = styled.div`
 export const Main = styled.div`
   display: flex;
   flex-direction: column;
-`;
+  align-items: center;
+  width: 100vw;
 
-export const Techs = styled.div`
-  display: flex;
-  flex-direction: column;
+  @media (min-width: 1023px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
 `;
 
 export const Titulos = styled.ul`
@@ -37,3 +51,13 @@ export const Titulos = styled.ul`
 export const Works = styled.div``;
 
 export const Perfil = styled.div``;
+
+export const Filter = styled.div`
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;

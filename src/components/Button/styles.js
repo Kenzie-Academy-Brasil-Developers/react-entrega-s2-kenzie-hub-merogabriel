@@ -5,9 +5,13 @@ export const Container = styled.button`
   color: ${(props) => (props.blue ? "#ffffff" : "#999999")};
   border-radius: 8px;
   border: none;
-  width: 356px;
+  width: 80%;
   height: 60px;
   font-size: 16px;
+
+  :hover {
+    cursor: pointer;
+  }
 
   @media (min-width: 769px) {
     width: 452px;

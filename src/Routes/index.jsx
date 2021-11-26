@@ -1,18 +1,15 @@
 import { Switch, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 import Login from "../Pages/Login";
 import Signup from "../Pages/Signup";
 import Home from "../Pages/Home";
 
-const Routes = () => {
-  const [auth, setAuth] = useState(false);
-
+const Routes = ({ auth, setAuth, setUser, user }) => {
   useEffect(() => {
     const token = localStorage.getItem("@kenziehub:token");
-
     if (token) {
-      return setAuth(true);
+      setAuth(true);
     }
   }, []);
 
@@ -22,10 +19,10 @@ const Routes = () => {
         <Login auth={auth} setAuth={setAuth} />
       </Route>
       <Route path="/signup">
-        <Signup />
+        <Signup auth={auth} setAuth={setAuth} />
       </Route>
-      <Route path="/:id">
-        <Home auth={auth} />
+      <Route path="/users/:id">
+        <Home auth={auth} setAuth={setAuth} setUser={setUser} user={user} />
       </Route>
     </Switch>
   );

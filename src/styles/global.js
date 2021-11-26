@@ -57,6 +57,7 @@ const GlobalStyle = createGlobalStyle`
   body, input, button {
     font-family: 'Inter', sans-serif;
   }
+}
 `;
 
 export default GlobalStyle;
